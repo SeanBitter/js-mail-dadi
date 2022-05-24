@@ -14,23 +14,25 @@ let sumPlayer = 0;
 for (let i = 1; i < 6; i++) {
     (dadiComputer[i] = (Math.floor(Math.random() * 6) + 1));
     dadiComputer.push(dadiComputer[i]);
+
     sumComputer += dadiComputer[i];
-    
-    console.log("Il risultato del computer è " + sumComputer);
 }
 
+console.log("Il risultato del computer è " + sumComputer);
 
 for (let i = 1; i < 6; i++) {
     (dadiPlayer[i] = (Math.floor(Math.random() * 6) + 1));
     dadiPlayer.push(dadiPlayer[i]);
 
     sumPlayer += dadiPlayer[i];
-    
-    console.log("Il tuo risultato è " + sumPlayer);
 }
+
+console.log("Il tuo risultato è " + sumPlayer);
 
 if (sumPlayer > sumComputer) {
     console.log("Hai vinto!");
-} else {
+} else if (sumComputer > sumPlayer) {
     console.log("Hai perso :(");
+} else {
+    console.log("Pareggio!");
 }
